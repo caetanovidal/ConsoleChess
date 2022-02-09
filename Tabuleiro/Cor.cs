@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Xadrez
 {
-    class Program
+    enum Cor
     {
-        static void Main(string[] args)
-        {
-            Tabuleiro tab = new Tabuleiro(8, 8);
-
-
-        }
+        Branca,
+        Preta,
+        Vermelha,
+        Amarela,
+        Azul
     }
 }
