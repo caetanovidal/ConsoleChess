@@ -20,5 +20,7 @@ namespace Xadrez
             CorPeca = cor;
             QuantidadeMovimentos = 0;
         }
+
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp1.Xadrez;
+using ConsoleApp1.TabuleiroEx;
 
 namespace Xadrez
 {
@@ -11,18 +12,22 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            try
+            {
+                Tabuleiro tab = new Tabuleiro(8, 8);
+
+                tab.ColocarPeca(new Torre(tab, Cor.Amarela), new Posicao(9, 1));
 
 
 
-            tab.colocarPeca(new Rei(tab, Cor.Vermelha), new Posicao(0, 0));
-            tab.colocarPeca(new Rei(tab, Cor.Branca), new Posicao(2, 4));
-            tab.colocarPeca(new Torre(tab, Cor.Vermelha), new Posicao(1, 3));
-            tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(0, 6));
+                Tela.ImprimirTabuleiro(tab);
+            }
+            catch (TabuleiroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
-
-            Tela.imprimirTabuleiro(tab);
-
+            Console.ReadLine();
         }
     }
 }

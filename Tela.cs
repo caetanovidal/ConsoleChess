@@ -9,7 +9,7 @@ namespace Xadrez
 {
     class Tela
     {
-        public static void imprimirTabuleiro(Tabuleiro tab)
+        public static void ImprimirTabuleiro(Tabuleiro tab)
         {
             for (int i=0; i<tab.Colunas; i++)
             {
@@ -18,14 +18,14 @@ namespace Xadrez
                     if (i == 1)
                     {
                         Posicao pos = new Posicao(i, j);
-                        tab.colocarPeca(new Peao(tab, Cor.Branca), pos);
+                        tab.ColocarPeca(new Peao(tab, Cor.Branca), pos);
                     }
                     if (i == 6)
                     {
                         Posicao pos = new Posicao(i, j);
-                        tab.colocarPeca(new Peao(tab, Cor.Vermelha), pos);
+                        tab.ColocarPeca(new Peao(tab, Cor.Vermelha), pos);
                     }
-                    if (  tab.pecaChamar(i,j) == null)
+                    if (  tab.PecaChamar(i,j) == null)
                     {
                         Console.Write(" - ");
                     }
