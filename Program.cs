@@ -16,11 +16,7 @@ namespace Xadrez
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
 
-                PosicaoXadrez pos = new PosicaoXadrez('a', 1);
-
-                Console.WriteLine(pos.ToPosicao());
-
-                Console.WriteLine(pos);
+                Tela.ImprimirTabuleiro(tab);
             }
             catch (TabuleiroException e)
             {
