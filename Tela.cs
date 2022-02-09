@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1.Xadrez;
 
 namespace Xadrez
 {
@@ -14,6 +15,16 @@ namespace Xadrez
             {
                 for(int j=0; j<tab.Linhas; j++)
                 {
+                    if (i == 1)
+                    {
+                        Posicao pos = new Posicao(i, j);
+                        tab.colocarPeca(new Peao(tab, Cor.Branca), pos);
+                    }
+                    if (i == 6)
+                    {
+                        Posicao pos = new Posicao(i, j);
+                        tab.colocarPeca(new Peao(tab, Cor.Vermelha), pos);
+                    }
                     if (  tab.pecaChamar(i,j) == null)
                     {
                         Console.Write(" - ");

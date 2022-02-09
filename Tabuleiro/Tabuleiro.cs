@@ -24,5 +24,7 @@
             p.PosicaoPeca = pos;
         }
 
+        
+
     }
 }
