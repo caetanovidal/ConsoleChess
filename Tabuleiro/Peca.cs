@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Xadrez
 {
-    class Peca
+    public class Peca
     {
         public Posicao PosicaoPeca { get; set; }
         public Cor CorPeca { get; protected set; }

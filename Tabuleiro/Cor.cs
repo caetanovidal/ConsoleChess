@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Xadrez
 {
-    enum Cor
+    public enum Cor
     {
         Branca,
         Preta,

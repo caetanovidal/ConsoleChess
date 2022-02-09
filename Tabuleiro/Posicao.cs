@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Xadrez
 {
-    class Posicao
+    public class Posicao
     {
         public int Linha { get; set; }
         public int Coluna { get; set; }
