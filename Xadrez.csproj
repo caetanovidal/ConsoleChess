@@ -55,6 +55,7 @@
     <Compile Include="Xadrez\Cavalo.cs" />
     <Compile Include="Xadrez\Dama.cs" />
     <Compile Include="Xadrez\Peao.cs" />
+    <Compile Include="Xadrez\PosicaoXadrez.cs" />
     <Compile Include="Xadrez\Rei.cs" />
     <Compile Include="Xadrez\Torre.cs" />
   </ItemGroup>

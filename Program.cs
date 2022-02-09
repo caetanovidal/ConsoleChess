@@ -16,11 +16,11 @@ namespace Xadrez
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
 
-                tab.ColocarPeca(new Torre(tab, Cor.Amarela), new Posicao(9, 1));
+                PosicaoXadrez pos = new PosicaoXadrez('a', 1);
 
+                Console.WriteLine(pos.ToPosicao());
 
-
-                Tela.ImprimirTabuleiro(tab);
+                Console.WriteLine(pos);
             }
             catch (TabuleiroException e)
             {
