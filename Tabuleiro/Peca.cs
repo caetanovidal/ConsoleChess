@@ -13,11 +13,12 @@ namespace Xadrez
         public int QuantidadeMovimentos { get; protected set; }
         public Tabuleiro Tab { get; set; }
 
-        public Peca(Posicao posicao, Tabuleiro tab, Cor cor)
+        public Peca(Tabuleiro tab, Cor cor)
         {
-            PosicaoPeca = posicao;
+            PosicaoPeca = null;
             Tab = tab;
             CorPeca = cor;
+            QuantidadeMovimentos = 0;
         }
     }
 }
