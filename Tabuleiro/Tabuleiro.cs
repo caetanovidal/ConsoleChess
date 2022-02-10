@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1.TabuleiroEx;
+using Xadrez;
 
 namespace Xadrez
 {
@@ -17,11 +18,14 @@ namespace Xadrez
 
         public Peca PecaChamar(int linha, int coluna)
         {
+            Posicao pos = new Posicao(linha, coluna);
+            ValidarPosicao(pos);
             return Pecas[linha, coluna];
         }
 
         public Peca PecaChamar(Posicao pos)
         {
+            ValidarPosicao(pos);
             return Pecas[pos.Linha, pos.Coluna];
         }
 
@@ -39,6 +43,18 @@ namespace Xadrez
             }
             Pecas[pos.Linha, pos.Coluna] = p;
             p.PosicaoPeca = pos;
+        }
+
+        public Peca RetirarPeca(Posicao pos)
+        {
+            if(PecaChamar(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = PecaChamar(pos);
+            aux.PosicaoPeca = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
         }
 
         public bool PosicaoValida(Posicao pos)

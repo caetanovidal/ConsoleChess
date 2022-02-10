@@ -16,17 +16,8 @@ namespace Xadrez
                 Console.Write($" {8 - i} ");
                 for(int j=0; j<tab.Linhas; j++)
                 {
-                    if (i == 1)
-                    {
-                        Posicao pos = new Posicao(i, j);
-                        tab.ColocarPeca(new Peao(tab, Cor.Branca), pos);
-                    }
-                    if (i == 6)
-                    {
-                        Posicao pos = new Posicao(i, j);
-                        tab.ColocarPeca(new Peao(tab, Cor.Vermelha), pos);
-                    }
-                    if (  tab.PecaChamar(i,j) == null)
+                    
+                    if (tab.PecaChamar(i,j) == null)
                     {
                         Console.Write(" - ");
                     }
@@ -38,6 +29,14 @@ namespace Xadrez
                 Console.WriteLine();
             }
             Console.WriteLine("    a  b  c  d  e  f  g  h ");
+        }
+
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
         }
 
         public static void ImprimirPeca(Peca peca)

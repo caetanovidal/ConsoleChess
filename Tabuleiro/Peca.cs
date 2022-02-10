@@ -21,6 +21,10 @@ namespace Xadrez
             QuantidadeMovimentos = 0;
         }
 
+        public void IncrementarQuantMovimentos()
+        {
+            QuantidadeMovimentos++;
+        }
 
     }
 }
