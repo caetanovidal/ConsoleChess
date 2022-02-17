@@ -24,7 +24,7 @@ namespace ConsoleApp1.Xadrez
 			return false;
 		}
 
-		private bool _testeTorreParaRoque(Posicao pos)
+		private bool testeTorreParaRoque(Posicao pos)
 		{
 			Peca p = Tab.PecaChamar(pos);
 			return p != null && p is Torre && p.CorPeca == CorPeca && p.QuantidadeMovimentos == 0;
@@ -105,27 +105,25 @@ namespace ConsoleApp1.Xadrez
 				mat[pos.Linha, pos.Coluna] = true;
 			}
 
-
 			// jogada especial roque
 
-			if (QuantidadeMovimentos==0 && !_partida.Xeque)
+			if (QuantidadeMovimentos == 0 && !_partida.Xeque)
 			{
-				// jogada especial roque pequeno
 				Posicao posT1 = new Posicao(PosicaoPeca.Linha, PosicaoPeca.Coluna + 3);
-				if (_testeTorreParaRoque(posT1))
+
+				if (testeTorreParaRoque(posT1))
 				{
 					Posicao p1 = new Posicao(PosicaoPeca.Linha, PosicaoPeca.Coluna + 1);
 					Posicao p2 = new Posicao(PosicaoPeca.Linha, PosicaoPeca.Coluna + 2);
-
 					if (Tab.PecaChamar(p1) == null && Tab.PecaChamar(p2) == null)
 					{
 						mat[PosicaoPeca.Linha, PosicaoPeca.Coluna + 2] = true;
 					}
 				}
 
-				// jogada especial roque grande
 				Posicao posT2 = new Posicao(PosicaoPeca.Linha, PosicaoPeca.Coluna - 4);
-				if (_testeTorreParaRoque(posT2))
+
+				if (testeTorreParaRoque(posT2))
 				{
 					Posicao p1 = new Posicao(PosicaoPeca.Linha, PosicaoPeca.Coluna - 1);
 					Posicao p2 = new Posicao(PosicaoPeca.Linha, PosicaoPeca.Coluna - 2);
@@ -136,7 +134,6 @@ namespace ConsoleApp1.Xadrez
 						mat[PosicaoPeca.Linha, PosicaoPeca.Coluna - 2] = true;
 					}
 				}
-
 
 			}
 
