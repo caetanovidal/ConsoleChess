@@ -40,19 +40,30 @@ namespace ConsoleApp1.Xadrez
 					break;
 				}
 				pos.Linha -= 1;
+				
 			}
 
 			//direita
 			pos.DefinirValores(PosicaoPeca.Linha, PosicaoPeca.Coluna + 1);
-			while (Tab.PosicaoValida(pos) && PodeMover(pos))
+			if (pos.Coluna <= 7)
 			{
-				mat[pos.Linha, pos.Coluna] = true;
-				if (Tab.ExistePeca(pos) && Tab.PecaChamar(pos).CorPeca != this.CorPeca)
+				while (Tab.PosicaoValida(pos) && PodeMover(pos))
 				{
-					break;
+					mat[pos.Linha, pos.Coluna] = true;
+					if (Tab.ExistePeca(pos) && Tab.PecaChamar(pos).CorPeca != this.CorPeca)
+					{
+						break;
+					}
+					if (pos.Coluna == 7)
+					{
+						break;
+					}
+					pos.Coluna += 1;
 				}
-				pos.Coluna += 1;
 			}
+			
+			
+			
 
 			//abaixo
 			pos.DefinirValores(PosicaoPeca.Linha + 1, PosicaoPeca.Coluna);
@@ -64,6 +75,7 @@ namespace ConsoleApp1.Xadrez
 					break;
 				}
 				pos.Linha += 1;
+				
 			}
 
 			//esquerda
@@ -76,6 +88,7 @@ namespace ConsoleApp1.Xadrez
 					break;
 				}
 				pos.Coluna -= 1;
+			
 			}
 
 

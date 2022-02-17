@@ -29,7 +29,6 @@ namespace ConsoleApp1.Xadrez
 			Posicao pos = new Posicao(0, 3);
 
 			//acima
-			//pos.DefinirValores(pos.Linha - 1, pos.Coluna);
 			pos.DefinirValores(PosicaoPeca.Linha - 1, PosicaoPeca.Coluna);
 
 			if (Tab.PosicaoValida(pos) && PodeMover(pos))
@@ -38,34 +37,37 @@ namespace ConsoleApp1.Xadrez
 			}
 
 			// ne
-			//pos.DefinirValores(pos.Linha - 1, pos.Coluna + 1);
 			pos.DefinirValores(PosicaoPeca.Linha - 1, PosicaoPeca.Coluna + 1);
-
-			if (Tab.PosicaoValida(pos) && PodeMover(pos))
+			if(pos.Coluna <= 7)
 			{
-				mat[pos.Linha, pos.Coluna] = true;
+				if (Tab.PosicaoValida(pos) && PodeMover(pos))
+				{
+					mat[pos.Linha, pos.Coluna] = true;
+				}
 			}
-
+			
 			// direita
-			//pos.DefinirValores(pos.Linha, pos.Coluna + 1);
 			pos.DefinirValores(PosicaoPeca.Linha, PosicaoPeca.Coluna + 1);
-
-			if (Tab.PosicaoValida(pos) && PodeMover(pos))
+			if (pos.Coluna <= 7)
 			{
-				mat[pos.Linha, pos.Coluna] = true;
+				if (Tab.PosicaoValida(pos) && PodeMover(pos))
+				{
+					mat[pos.Linha, pos.Coluna] = true;
+				}
 			}
-
+			
 			// se
-			//pos.DefinirValores(pos.Linha + 1, pos.Coluna + 1);
 			pos.DefinirValores(PosicaoPeca.Linha + 1, PosicaoPeca.Coluna + 1);
 
-			if (Tab.PosicaoValida(pos) && PodeMover(pos))
+			if (pos.Coluna <= 7)
 			{
-				mat[pos.Linha, pos.Coluna] = true;
+				if (Tab.PosicaoValida(pos) && PodeMover(pos))
+				{
+					mat[pos.Linha, pos.Coluna] = true;
+				}
 			}
-
+			
 			// abaixo
-			//pos.DefinirValores(pos.Linha + 1, pos.Coluna);
 			pos.DefinirValores(PosicaoPeca.Linha + 1, PosicaoPeca.Coluna);
 			if (Tab.PosicaoValida(pos) && PodeMover(pos))
 			{
@@ -73,7 +75,6 @@ namespace ConsoleApp1.Xadrez
 			}
 
 			// so
-			//pos.DefinirValores(pos.Linha + 1, pos.Coluna - 1);
 			pos.DefinirValores(PosicaoPeca.Linha + 1, PosicaoPeca.Coluna - 1);
 
 			if (Tab.PosicaoValida(pos) && PodeMover(pos))
@@ -82,7 +83,6 @@ namespace ConsoleApp1.Xadrez
 			}
 
 			// esquerda
-			//pos.DefinirValores(pos.Linha, pos.Coluna - 1);
 			pos.DefinirValores(PosicaoPeca.Linha, PosicaoPeca.Coluna - 1);
 
 			if (Tab.PosicaoValida(pos) && PodeMover(pos))
@@ -91,7 +91,6 @@ namespace ConsoleApp1.Xadrez
 			}
 
 			// no
-			//pos.DefinirValores(pos.Linha -1, pos.Coluna - 1);
 			pos.DefinirValores(PosicaoPeca.Linha - 1, PosicaoPeca.Coluna - 1);
 			if (Tab.PosicaoValida(pos) && PodeMover(pos))
 			{
