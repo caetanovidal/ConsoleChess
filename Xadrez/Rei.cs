@@ -26,7 +26,7 @@ namespace ConsoleApp1.Xadrez
 		{
 			bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
 
-			Posicao pos = new Posicao(0, 3);
+			Posicao pos = new Posicao(0, 0);
 
 			//acima
 			pos.DefinirValores(PosicaoPeca.Linha - 1, PosicaoPeca.Coluna);

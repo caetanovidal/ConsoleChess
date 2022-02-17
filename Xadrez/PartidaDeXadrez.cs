@@ -182,7 +182,6 @@ namespace Xadrez
 
 				if(mat[posRei.Linha, posRei.Coluna])
 				{
-					Console.WriteLine("cheque");
 					return true;
 				}
 			}
@@ -198,20 +197,57 @@ namespace Xadrez
 
         private void ColocarPecas()
         {
-			ColocarNovaPeca('d', 7, new Torre(_tab, Cor.Branca));
-			ColocarNovaPeca('c', 7, new Torre(_tab, Cor.Branca));
-			ColocarNovaPeca('e', 7, new Torre(_tab, Cor.Branca));
-			ColocarNovaPeca('c', 8, new Torre(_tab, Cor.Branca));
-			ColocarNovaPeca('e', 8, new Torre(_tab, Cor.Branca));
-			ColocarNovaPeca('d', 8, new Rei(_tab, Cor.Branca));
+			
 			ColocarNovaPeca('a', 8, new Torre(_tab, Cor.Branca));
+			ColocarNovaPeca('h', 8, new Torre(_tab, Cor.Branca));
+
+			ColocarNovaPeca('d', 8, new Rei(_tab, Cor.Branca));
+			ColocarNovaPeca('e', 8, new Dama(_tab, Cor.Branca));
+
+
+			ColocarNovaPeca('c', 8, new Bispo(_tab, Cor.Branca));
+			ColocarNovaPeca('f', 8, new Bispo(_tab, Cor.Branca));
+
+			ColocarNovaPeca('a', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('b', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('c', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('d', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('e', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('f', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('g', 7, new Peao(_tab, Cor.Branca));
+			ColocarNovaPeca('h', 7, new Peao(_tab, Cor.Branca));
+
+			ColocarNovaPeca('b', 8, new Cavalo(_tab, Cor.Branca));
+			ColocarNovaPeca('g', 8, new Cavalo(_tab, Cor.Branca));
+
+
+
+
 
 			ColocarNovaPeca('a', 1, new Torre(_tab, Cor.Preta));
 			ColocarNovaPeca('h', 1, new Torre(_tab, Cor.Preta));
 
-
-			ColocarNovaPeca('e', 2, new Torre(_tab, Cor.Preta));
 			ColocarNovaPeca('e', 1, new Rei(_tab, Cor.Preta));
+			ColocarNovaPeca('d', 1, new Dama(_tab, Cor.Preta));
+
+
+			ColocarNovaPeca('c', 1, new Bispo(_tab, Cor.Preta));
+			ColocarNovaPeca('f', 1, new Bispo(_tab, Cor.Preta));
+
+			ColocarNovaPeca('a', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('b', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('c', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('d', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('e', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('f', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('g', 2, new Peao(_tab, Cor.Preta));
+			ColocarNovaPeca('h', 2, new Peao(_tab, Cor.Preta));
+
+			ColocarNovaPeca('b', 1, new Cavalo(_tab, Cor.Preta));
+			ColocarNovaPeca('g', 1, new Cavalo(_tab, Cor.Preta));
+
+
+
 
 
 		}
