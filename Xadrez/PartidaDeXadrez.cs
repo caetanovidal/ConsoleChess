@@ -34,25 +34,11 @@ namespace Xadrez
 
         private void ColocarPecas()
         {
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('a', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('b', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('c', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('d', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('e', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('f', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('g', 2).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Vermelha), new PosicaoXadrez('h', 2).ToPosicao());
+			_tab.ColocarPeca(new Rei(_tab, Cor.Branca), new PosicaoXadrez('d', 8).ToPosicao());
+			_tab.ColocarPeca(new Torre(_tab, Cor.Branca), new PosicaoXadrez('a', 8).ToPosicao());
 
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('a', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('b', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('c', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('d', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('e', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('f', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('g', 7).ToPosicao());
-            _tab.ColocarPeca(new Peao(_tab, Cor.Branca), new PosicaoXadrez('h', 7).ToPosicao());
 
-            _tab.ColocarPeca(new Torre(_tab, Cor.Vermelha), new PosicaoXadrez('a', 1).ToPosicao());
+			_tab.ColocarPeca(new Torre(_tab, Cor.Vermelha), new PosicaoXadrez('a', 1).ToPosicao());
             _tab.ColocarPeca(new Torre(_tab, Cor.Vermelha), new PosicaoXadrez('h', 1).ToPosicao());
 
         }

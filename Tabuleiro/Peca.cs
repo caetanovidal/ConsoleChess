@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Xadrez
 {
-    public class Peca
+    public abstract class Peca
     {
         public Posicao PosicaoPeca { get; set; }
         public Cor CorPeca { get; protected set; }
@@ -26,5 +26,6 @@ namespace Xadrez
             QuantidadeMovimentos++;
         }
 
+		public abstract bool[,] MovimentosPossiveis();
     }
 }

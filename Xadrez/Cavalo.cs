@@ -14,7 +14,12 @@ namespace ConsoleApp1.Xadrez
 
         }
 
-        public override string ToString()
+		public override bool[,] MovimentosPossiveis()
+		{
+			throw new NotImplementedException();
+		}
+
+		public override string ToString()
         {
             return " C ";
         }
