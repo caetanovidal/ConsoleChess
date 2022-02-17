@@ -36,7 +36,8 @@ namespace Xadrez
         }
 
         public void ColocarPeca(Peca p, Posicao pos)
-        {
+
+		{
             if (ExistePeca(pos))
             {
                 throw new TabuleiroException("Ja existe uma peça nessa posição!");
