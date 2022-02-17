@@ -69,7 +69,8 @@ namespace Xadrez
 
         public void ValidarPosicao(Posicao pos)
         {
-            if (!PosicaoValida(pos)){
+            if (!PosicaoValida(pos))
+			{
                 throw new TabuleiroException("Posicao Inválida");
             }
         }
