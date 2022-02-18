@@ -179,8 +179,18 @@ namespace Xadrez
 				Xeque = false;
 			}
 
-			_turno++;
-			MudaJogador();
+			if (TesteXequeMate(Adversaria(_jogadorAtual)))
+			{
+				Terminada = true;
+
+			}
+			else
+			{
+				_turno++;
+				MudaJogador();
+			}
+
+			
 
 			// jogadaespecial en passant
 
@@ -300,6 +310,37 @@ namespace Xadrez
 				}
 			}
 			return false;
+		}
+
+		public bool TesteXequeMate(Cor cor)
+		{
+			if (!EstaEmXeque(cor))
+				return false;
+
+			foreach (Peca p in pecasEmJogo(cor))
+			{
+				bool[,] mat = p.MovimentosPossiveis();
+				for (int i=0; i < _tab.Linhas; i++)
+				{
+					for (int j=0; j < _tab.Colunas; i++)
+					{
+						if (i > 7 || j > 7)
+						{
+							break;
+						}
+						if (mat[i, j])
+						{
+							Posicao destino = new Posicao(i, j);
+							Peca PecaCapturada = ExecutaMovimento(p.PosicaoPeca, destino);
+							bool testeXeque = EstaEmXeque(cor);
+							DesfazMovimento(p.PosicaoPeca, destino, PecaCapturada);
+							if (!testeXeque)
+								return false;
+						}
+					}
+				}
+			}
+			return true;
 		}
 
 
